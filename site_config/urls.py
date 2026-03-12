@@ -1,3 +1,7 @@
 from django.urls import path
 
-urlpatterns = []
+from .views import SiteConfigurationDetailView
+
+urlpatterns = [
+    path("", SiteConfigurationDetailView.as_view(), name="site-config-detail"),
+]

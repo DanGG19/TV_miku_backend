@@ -1,4 +1,8 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = []
+from .views import HomeBannerViewSet
 
+router = DefaultRouter()
+router.register(r"banners", HomeBannerViewSet, basename="banner")
+
+urlpatterns = router.urls
